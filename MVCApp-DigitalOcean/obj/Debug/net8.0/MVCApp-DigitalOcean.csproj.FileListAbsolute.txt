@@ -1,5 +1,6 @@
 C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\bin\Debug\net8.0\appsettings.json
+C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\bin\Debug\net8.0\appsettings.Production.json
 C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\bin\Debug\net8.0\MVCApp-DigitalOcean.staticwebassets.runtime.json
 C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\bin\Debug\net8.0\MVCApp-DigitalOcean.staticwebassets.endpoints.json
 C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\bin\Debug\net8.0\MVCApp-DigitalOcean.exe
@@ -15,6 +16,7 @@ C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\obj\Debug\ne
 C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\obj\Debug\net8.0\MVCApp-DigitalOcean.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\obj\Debug\net8.0\MVCApp-DigitalOcean.RazorAssemblyInfo.cache
 C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\obj\Debug\net8.0\MVCApp-DigitalOcean.RazorAssemblyInfo.cs
+C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\obj\Debug\net8.0\MVCApp-DigitalOcean.sourcelink.json
 C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\shiek\source\repos\MVCApp-DigitalOcean\MVCApp-DigitalOcean\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

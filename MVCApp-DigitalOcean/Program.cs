@@ -2,10 +2,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.WebHost.ConfigureKestrel(options =>
+if (!builder.Environment.IsDevelopment())
 {
-    options.ListenAnyIP(5000);
-});
+    builder.WebHost.ConfigureKestrel(options =>
+    {
+        options.ListenAnyIP(5000);
+    });
+}
 
 var app = builder.Build();
 
