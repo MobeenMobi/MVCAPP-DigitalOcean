@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVCApp-DigitalOcean")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ef1459b94211c6a045e180ba888d3e8586f8452")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b844c5dba6f4c094ccf0fb3bc8ae6ac8b4eccc8b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVCApp-DigitalOcean")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVCApp-DigitalOcean")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

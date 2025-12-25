@@ -1,34 +1,45 @@
-name: CI
+name: CI + Deploy to IIS
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - run: dotnet restore
+      - run: dotnet build MVCApp-DigitalOcean/MVCApp-DigitalOcean.csproj -c Release --no-restore
+      - run: dotnet publish MVCApp-DigitalOcean/MVCApp-DigitalOcean.csproj -c Release -o publish
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mvcapp
+          path: publish/
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'
-
-    - name: Restore
-      run: dotnet restore
-
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
-
-    - name: Publish
-      run: dotnet publish -c Release -o publish
-
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: mvcapp-${{ github.run_number }}
-        path: publish/
+  deploy:
+    needs: build
+    runs-on: self-hosted  # 👈 will run on your UAT server
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: mvcapp
+          path: publish
+      - shell: powershell
+        run: |
+          Import-Module WebAdministration
+          Stop-WebAppPool -Name "MVCApp"
+      - shell: powershell
+        run: |
+          $timestamp = Get-Date -Format "yyyyMMddHHmm"
+          Rename-Item "C:\inetpub\wwwroot\MVCApp" "C:\inetpub\wwwroot\MVCApp_backup_$timestamp"
+      - shell: powershell
+        run: |
+          Copy-Item "publish\*" "C:\inetpub\wwwroot\MVCApp" -Recurse
+      - shell: powershell
+        run: |
+          Import-Module WebAdministration
+          Start-WebAppPool -Name "MVCApp"
